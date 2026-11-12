@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Explore past events and photo galleries from The Courts of St. Catherine.">
+
+    <title>Events | The Courts of St. Catherine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <div class="church-brand">
+                <img src="img/logo.png"
+                     alt="The Courts of St. Catherine church emblem"
+                     class="church-emblem">
+
+                <div>
+                    <h1>The Courts of St. Catherine</h1>
+                    <p>Spiritual Baptist Church</p>
+                </div>
+            </div>
+        </header>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="founder.html">Founder</a>
+            <a href="events.html" aria-current="page">Events</a>
+            <a href="calendar.html">Church Calendar</a>
+            <a href="donations.html">Donations</a>
+        </nav>
+
+        <main id="top">
+            <section class="events-intro">
+                <h2>Our Church Events</h2>
+                <p>Celebrating faith, fellowship, and community.</p>
+            </section>
+
+            <section class="past-events">
+                <h2>Past Events</h2>
+
+                <h3>Father’s Day Brunch 2026</h3>
+                <p>
+                    Memories from our Father’s Day Brunch.
+                    Click any picture to view it larger.
+                    Use your browser’s Back button to return to the gallery.
+                </p>
+
+                <details class="photo-album">
+    <summary>View Father’s Day Brunch Photos (48)</summary>
+
+    <div class="event-gallery" id="fathers-day-gallery"></div>
+</details>
+
+                <noscript>
+                    <p>Please enable JavaScript to view this photo gallery.</p>
+                </noscript>
+
+                <p class="gallery-return">
+                    <a class="button" href="#top">Back to Top</a>
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>The Courts of St. Catherine</p>
+            <p>Faith. Tradition. Community.</p>
+            <small>&copy; 2026 The Courts of St. Catherine.</small>
+        </footer>
+
+    </div>
+
+    <script>
+        // Add the 48 numbered photographs to the gallery.
+        const gallery = document.getElementById("fathers-day-gallery");
+
+        for (let number = 1; number <= 48; number++) {
+            const picturePath =
+                "img/fathersday2026/fathersday" + number + ".jpeg";
+
+            const link = document.createElement("a");
+            link.href = picturePath;
+
+            const picture = document.createElement("img");
+            picture.src = picturePath;
+            picture.alt = "Father’s Day Brunch 2026, photo " + number;
+            picture.loading = "lazy";
+
+            link.appendChild(picture);
+            gallery.appendChild(link);
+        }
+    </script>
+</body>
+</html>
