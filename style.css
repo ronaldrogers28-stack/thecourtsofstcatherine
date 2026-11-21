@@ -248,7 +248,7 @@ footer p:nth-child(2) {
     }
 
     nav {
-        flex-direction: column;
+        flex-direction: row !important;
         align-items: center;
         gap: 8px;
     }
@@ -707,5 +707,89 @@ main .founder-section p {
 .donation-box a:hover {
     background-color: #245B48;
 }
+
+
+/* Past Events Gallery */
+
+.past-events {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.past-events-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.past-events-gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #C6A34D;
+    border-radius: 8px;
+    cursor: zoom-in;
+}
+
+.past-events-gallery img:hover {
+    border-color: #123F32;
+}
+
+
+/* Final Past Events Thumbnail Size */
+
+.past-events-gallery a {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+
+.past-events-gallery a img {
+    display: block;
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    object-fit: cover;
+    border: 3px solid #C6A34D;
+    border-radius: 8px;
+}
+
+/* Horizontal Navigation Menu */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 5px;
+}
+
+nav ul li a:hover {
+    color: #C6A34D;
+}
+
+
+
 
 
